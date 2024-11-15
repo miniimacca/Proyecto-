@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Na'Guará</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo">
+        <img src="../media/img/Logo_Definitivo_Banner.png" />
+      </a>
+      <div class="menuToggle"></div>
+      <nav>
+        <ul>
+          <li>
+            <label id="label1">Landing</label>
+          </li>
+          <li>
+            <label id="label2">Menu</label>
+          </li>
+          <li>
+            <label id="label3">Carrito</label>
+          </li>
+          <li>
+            <label id="label4">Cerrar Sesion</label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="landingContainer"></div>
+
+      <div class="cardContainer hidden">
+        <button id="addProductBtn">Añadir Producto +</button>
+      </div>
+
+      <div class="cartContainer hidden">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th id="totalDisplay">Total: $0</th>
+            </tr>
+          </thead>
+          <tbody class="cartContent"></tbody>
+        </table>
+        <div class="buttons">
+          <button id="cancelCart">Reiniciar</button>
+          <button id="confirmCart">Confirmar</button>
+        </div>
+      </div>
+
+      <div class="createProductForm hidden">
+        <h2>Crear Nuevo Producto</h2>
+        <input id="nombre" type="text" placeholder="Nombre" />
+        <input id="descripcion" type="text" placeholder="Descripcion" />
+        <input id="precio" type="number" placeholder="Precio" />
+        <select id="imagen">
+          <option value="-1" selected disabled>Seleccione una Imagen</option>
+          <option value="../media/img/arepa.jfif">Arepa</option>
+          <option value="../media/img/empanada.jfif">Empanada</option>
+          <option value="../media/img/tequeños.jfif">Tequeños</option>
+        </select>
+
+        <div class="buttons">
+          <button id="cancelProduct">Cancelar</button>
+          <button id="createProduct">Crear</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

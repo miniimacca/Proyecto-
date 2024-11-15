@@ -1,0 +1,303 @@
+/* CSS GLOBAL*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background: linear-gradient(90deg, #912a5d, #551937);
+  overflow-x: hidden;
+}
+.hidden {
+  display: none !important;
+}
+
+/* HEADER */
+header {
+  z-index: 99999999999999999;
+  width: 100%;
+  min-height: 66px;
+  background: #9b8963;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 600;
+  text-decoration: none;
+  img {
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px #9b8963;
+    height: 50px;
+    width: 400px;
+  }
+}
+header ul {
+  position: relative;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+  float: left;
+}
+header ul li label {
+  color: #fff;
+  font-size: 1.1em;
+  padding: 20px 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+header ul li label:hover {
+  background: #c9b07a;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100vw;
+}
+
+/* BIENVENIDA */
+.landingContainer {
+  min-height: 85vh;
+  width: 1340px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+/* CARDS */
+.cardContainer {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  min-height: 85vh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.cardContainer button {
+  max-height: 300px;
+  border-radius: 20px;
+  border: 1px solid #646464;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.cardContainer button:hover {
+  background: #b1b1b1;
+}
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: all 0.75s ease;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #646464;
+}
+.card:hover {
+  transform: rotateY(180deg);
+  box-shadow: -10px 10px 20px #646464;
+}
+.cardFront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.cardBack {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #e2e2e2;
+  color: #333;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10px;
+  .descripcion {
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 50px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    font-weight: 500;
+  }
+  .descripcion::-webkit-scrollbar {
+    width: 5px;
+  }
+  .descripcion::-webkit-scrollbar-thumb {
+    width: 1px;
+    border-radius: 5px;
+    background: #912a5d;
+  }
+}
+.cardBack .actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  button {
+    background: green;
+    border: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    box-shadow: 2px 2px 10px #474747;
+  }
+  button:hover {
+    color: #fff;
+  }
+  button:active {
+    box-shadow: inset 2px 2px 10px #474747;
+  }
+}
+
+/* CARRITO */
+.cartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  min-height: 85vh;
+  width: 1340px;
+  border-radius: 20px;
+  background: #fff;
+}
+.cartContainer table {
+  width: 90%;
+  border: 1px solid #000;
+}
+.cartContainer table thead tr th {
+  width: 20%;
+  height: 50px;
+  border: 1px solid #000;
+}
+.cartContainer table tbody tr td {
+  text-align: center;
+  height: 30px;
+  border: 1px solid #000;
+}
+.cartContainer .buttons button {
+  border: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5em;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 2px 2px 10px #474747;
+  color: #fff;
+}
+.cartContainer .buttons button:hover {
+  color: #000;
+}
+.cartContainer .buttons button:active {
+  box-shadow: inset 2px 2px 10px #474747;
+}
+.cartContainer .buttons #cancelCart {
+  background: red;
+}
+.cartContainer .buttons #confirmCart {
+  background: green;
+}
+
+/* PRODUCT FORM */
+.createProductForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 85vh;
+  width: 1340px;
+  border-radius: 20px;
+  background: #fff;
+}
+.createProductForm h2 {
+  font-weight: 500;
+  font-size: 2em;
+  border-bottom: 1px solid #646464;
+}
+.createProductForm input {
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 80%;
+  height: 50px;
+  border: 1px solid #646464;
+  border-radius: 10px;
+  padding: 5px;
+}
+.createProductForm select {
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 80%;
+  height: 50px;
+  border: 1px solid #646464;
+  border-radius: 10px;
+  padding: 5px;
+}
+.createProductForm .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.createProductForm .buttons button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 10px #646464;
+}
+.createProductForm .buttons button:hover {
+  color: #333;
+}
+.createProductForm .buttons button:active {
+  box-shadow: inset 0 0 10px #474747;
+}
+.createProductForm .buttons #cancelProduct {
+  background: red;
+}
+.createProductForm .buttons #createProduct {
+  background: green;
+}
